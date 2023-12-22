@@ -111,7 +111,6 @@ module "terraform_aws_firewall_eks_node" {
 
 module "terraform_aws_kubernetes_cluster" {
   source  = "kwaziio/kubernetes-cluster/aws"
-  version = "0.2.0-alpha"
 
   kubernetes_cluster_cidr          = "10.15.0.0/16"
   kubernetes_cluster_firewall_ids  = [module.terraform_aws_firewall_eks_cluster.id]
